@@ -1,0 +1,152 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 0;
+    overflow: hidden;
+    background-color: rgb(249, 249, 249);
+}
+
+.container{
+    width: 0%;
+    height: 100%;
+    object-fit: fill;
+    animation: login 1s 1s forwards ease-in-out 1;
+}
+
+@keyframes login {
+    0%{
+        width: 0%;
+        height: 100%;
+        filter: invert(0);
+    }
+    100%{
+        width: 150%;
+        height: 140%;
+        opacity: .6;
+    }
+}
+
+.form-container{
+    position: fixed;
+    top: -80%;
+    right: 35%;
+    bottom: 100%;
+    left: 35%;
+    background-image: url("loginbg.jpg");
+    background-position: center;
+    border: .6vh solid rgb(81, 78, 0);
+    border-radius: 10%;
+    color: rgb(81, 78, 0);
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    display: block;
+    animation: fall 2s 2s forwards linear 1;
+    overflow: hidden;
+}
+
+@keyframes fall {
+    0%{
+        transform: translate(0, 0)
+    }
+    25%{
+        transform: rotate(-20deg) translate(-30%, 90%);
+    }
+    40%{
+        transform: rotate(10deg) translate(10%, 89%);
+    }
+    50%{
+        transform: rotate(5deg) translate(5%, 94%);
+    }
+    70%{
+        transform: rotate(-10deg) translate(-10%, 100%);
+    }
+    80%{
+        transform: rotate(-5deg) translate(-5%, 105%);
+    }
+    90%{
+        transform: rotate(2deg) translate(2%, 107%);
+    }
+    100%{
+        transform: translate(0px, 110%)
+    }
+}
+
+input{
+    margin: 1vh;
+    z-index: 2;
+    background-color: rgb(245,231,206);
+}
+
+label{
+    font-size: 3vh;
+    z-index: 2;
+}
+
+h1{
+    width: 100%;
+    margin-top: 25%;
+    z-index: 2;
+}
+
+.submit{
+    margin-top: 2.5vh;
+    font-size: 2.5vh;
+    background-color: transparent;
+    transition-duration: 1s;
+    color: rgb(81, 78, 0);
+}
+
+.submit:hover{
+    word-spacing: 5vh;
+    background-color: rgb(208, 218, 94);
+}
+
+.gear{
+    max-width: 35%;
+    position: absolute;
+    top: -8%;
+    left: -8%;
+    animation: spin 18s 1s linear infinite;
+}
+
+.gear2{
+    max-width: 75%;
+    position: absolute;
+    top: 65%;
+    left: 45%;
+    animation: spin 25s 1s linear infinite;
+}
+
+@keyframes spin {
+    0%{
+        transform: rotate(0);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+      background-color: lightyellow;
+    }
+    .form-container{
+        width: 50%;
+        position: fixed;
+        top: -80%;
+        right: 35%;
+        bottom: 100%;
+        left: 25%;
+    }
+  }

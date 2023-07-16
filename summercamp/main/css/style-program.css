@@ -1,0 +1,35 @@
+.searchbar{
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 41rem;
+}
+
+.mapdiv{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20rem;
+}
+
+.map{
+    width: 30%;
+}
+
+.search{
+    height: 25rem;
+    width: 50%;
+    color: black;
+    display: flex;
+    font-size: 15rem;
+}
+
+@media only screen and (max-width: 600px) {
+	.map{
+        width: 50%;
+    }
+    .search{
+        height: 35rem;
+        width: 50%;
+    }
+  }
