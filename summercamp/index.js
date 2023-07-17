@@ -55,14 +55,14 @@ submit.addEventListener('click', async(e) => {
     
     if(localStorage.getItem('exist') == 'true'){
         if(name.value == ''){
-            alert('please choose a name')
+            alert('please choose a nickname')
         }
         else{
             if(password.value == ''){
                 alert('please input password')
             }else{
                 await localStorage.setItem('exist', false)
-                await filterData('password', password.value);
+                await filterData('password', btoa(password.value));
                 if(localStorage.getItem('exist') == 'true'){
                     await alert('Welcome back', name.value)
                     await localStorage.setItem("Signin", true);
@@ -75,7 +75,7 @@ submit.addEventListener('click', async(e) => {
         }
     } else {
         if(name.value == ''){
-            alert('please choose a name')
+            alert('please choose a nickname')
         }
         else{
             if(email.value == ''){
@@ -87,7 +87,7 @@ submit.addEventListener('click', async(e) => {
                     let addAccount = {
                         name: name.value,
                         email: email.value,
-                        password: password.value
+                        password: btoa(password.value)
                     }
                     await addData(addAccount);
                     await localStorage.setItem("Signin", true);

@@ -41,8 +41,19 @@
 	<div class="body2">
 		<div class="mapdiv"><img class="map" src="./css/map.png"></div>
 		<form class="searchbar">
-			<input type="text" class="search" placeholder="SEARCH FOR YOUR FAVOURITE ATTRACTIONS">
+			<input type="text" class="search" placeholder="SEARCH FOR YOUR FAVOURITE ATTRACTIONS" data-search>
 		</form>
+
+		<div class="location" data-container></div>
+
+		<template data-location-template>
+			<div class="card">
+				<div class="card-name">
+					<p data-name>- Ha Noi</p>
+					<p data-web>- hanoi.org</p>
+				</div>
+			</div>
+		</template>
 	</div>
 	<div class="footer">
 		<div>
@@ -90,5 +101,7 @@
 			</p>
 		</div>
 	</div>
+
+	<script src="js/program.js"></script>
 </body>
 </html>
