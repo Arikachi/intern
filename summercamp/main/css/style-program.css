@@ -40,12 +40,55 @@
 
 .card-name{
     margin: 10rem;
+    display: flex;
+    align-items: center;
 }
 
 .card-name p{
     font-size: 20rem;
     margin: 0;
     color: white;
+}
+
+.info{
+    width: 50%;
+    float: left;
+}
+
+.infofav{
+    width: 50%;
+}
+
+.fav{
+    font-size: 15rem;
+    background-color: transparent;
+    color: white;
+    border: 1rem solid white;
+    border-radius: 10%;
+    float: right;
+    margin: 1rem;
+}
+
+.fav:hover{
+    font-size: 15.2rem;
+    background-color: white;
+    color: black;
+}
+
+.nofav{
+    font-size: 15rem;
+    background-color: transparent;
+    color: white;
+    border: 1rem solid white;
+    border-radius: 10%;
+    float: right;
+    margin: 1rem;
+}
+
+.nofav:hover{
+    font-size: 15.2rem;
+    background-color: white;
+    color: black;
 }
 
 .hide{

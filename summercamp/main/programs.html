@@ -49,8 +49,14 @@
 		<template data-location-template>
 			<div class="card">
 				<div class="card-name">
-					<p data-name>- Ha Noi</p>
-					<p data-web>- hanoi.org</p>
+					<div class="info">
+						<p data-name>- Ha Noi</p>
+						<p data-web>- hanoi.org</p>
+					</div>
+					<div class="infofav">
+						<button class="fav" fav>Add to favourite!</button>
+						<button class="nofav" nofav>Remove from favourite</button>
+					</div>
 				</div>
 			</div>
 		</template>
@@ -102,6 +108,7 @@
 		</div>
 	</div>
 
-	<script src="js/program.js"></script>
+	<script  type="module" src="js/program.js"></script>
+	<script  type="module" src="js/module.js"></script>
 </body>
 </html>

@@ -10,6 +10,7 @@ body {
 	background:url(../images/bg-body.jpg);
 	margin:0;
 	font-family: TimesNewRoman, "Times New Roman", Times, Baskerville, Georgia, serif;
+	overflow-x: hidden;
 }
 
 .doorleft{
@@ -174,6 +175,18 @@ p a:hover {
 	height:168rem;
 	margin:0 0 41rem;
 }
+
+.welcome{
+	font-size: 20rem;
+	color: white;
+	position: fixed;
+	top: 0;
+	display: flex;
+	justify-content: center;
+	padding: 2rem;
+	border: dotted 2rem white;
+}
+
 .header div a {
 	outline:none;
 }

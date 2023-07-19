@@ -1,0 +1,39 @@
+.title{
+    font-size: 30rem;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 10rem;
+}
+
+.location{
+    width: 100%;
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    width: 50%;
+    border: solid white 2rem;
+    margin: 5rem;
+}
+
+.card-name{
+    margin: 10rem;
+    display: flex;
+    align-items: center;
+}
+
+.card-name p{
+    font-size: 20rem;
+    margin: 0;
+    color: white;
+}
+
+.info{
+    width: 50%;
+    float: left;
+}

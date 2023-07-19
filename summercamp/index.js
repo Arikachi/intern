@@ -1,5 +1,3 @@
-console.log('arika');
-
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-app.js";
 import { getFirestore, collection, getDocs, addDoc, query, where } from "https://www.gstatic.com/firebasejs/9.21.0/firebase-firestore.js";
 
@@ -67,6 +65,7 @@ submit.addEventListener('click', async(e) => {
                     await alert('Welcome back', name.value)
                     await localStorage.setItem("Signin", true);
                     await localStorage.setItem('name', email.value)
+                    await localStorage.setItem('nickname', name.value)
                     window.location.assign('./main/index.html')
                 }else{
                     alert('wrong password (account already existed)')
@@ -92,6 +91,7 @@ submit.addEventListener('click', async(e) => {
                     await addData(addAccount);
                     await localStorage.setItem("Signin", true);
                     await localStorage.setItem('name', email.value)
+                    await localStorage.setItem('nickname', name.value)
                     window.location.assign('./main/index.html')
                 }
             }
