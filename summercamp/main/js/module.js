@@ -23,5 +23,10 @@ export let locationX = [
         "name": "Halong",
         "website": "halong.org",
         "id": 5
+    },
+    {
+        "name": "Cantho",
+        "website": "cantho.org",
+        "id": 6
     }
 ]

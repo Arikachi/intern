@@ -10,12 +10,9 @@ const firebaseConfig = {
   appId: "1:800952059305:web:b5f84163d797804b10b0b8",
   measurementId: "G-S05WY9E9SG"
 };
-
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
-
 localStorage.setItem("Signin", false);
-
 let addData = async (signin) => {
     try {
         const docRef = await addDoc(collection(db, "signin"), signin);
@@ -24,9 +21,7 @@ let addData = async (signin) => {
         console.error("Error adding document: ", e);
       }
 }
-
 localStorage.setItem('exist', false)
-
 let filterData = async (fieldFilter, condition) => {
     try {
         const q = query(collection(db, "signin"), where(fieldFilter, "==", condition));
@@ -40,11 +35,16 @@ let filterData = async (fieldFilter, condition) => {
         console.log(error);
     }
 }
-
 let name = document.querySelector(".nameinput")
 let email = document.querySelector(".emailinput")
 let password = document.querySelector(".passwordinput")
 let submit = document.querySelector(".submit")
+
+import {locationX} from "./main/js/module.js";
+let fav = []
+localStorage.setItem("fav", fav)
+const colRef = collection(db, "favourites");
+const docsSnap = await getDocs(colRef);
 
 submit.addEventListener('click', async(e) => {
     await e.preventDefault()
@@ -62,10 +62,20 @@ submit.addEventListener('click', async(e) => {
                 await localStorage.setItem('exist', false)
                 await filterData('password', btoa(password.value));
                 if(localStorage.getItem('exist') == 'true'){
-                    await alert('Welcome back', name.value)
+                    await alert('Welcome back ' + name.value)
                     await localStorage.setItem("Signin", true);
                     await localStorage.setItem('name', email.value)
                     await localStorage.setItem('nickname', name.value)
+                    await docsSnap.forEach(doc => {
+                        if(doc.data().name == localStorage.getItem("name")){
+                            locationX.forEach(item => {
+                                if(doc.data().favs.includes(item.name)){
+                                    fav.push(item)
+                                    localStorage.setItem("fav", JSON.stringify(fav))
+                                }
+                            })
+                        }
+                    })
                     window.location.assign('./main/index.html')
                 }else{
                     alert('wrong password (account already existed)')
@@ -92,6 +102,16 @@ submit.addEventListener('click', async(e) => {
                     await localStorage.setItem("Signin", true);
                     await localStorage.setItem('name', email.value)
                     await localStorage.setItem('nickname', name.value)
+                    await docsSnap.forEach(doc => {
+                        if(doc.data().name == localStorage.getItem("name")){
+                            locationX.forEach(item => {
+                                if(doc.data().favs.includes(item.name)){
+                                    fav.push(item)
+                                    localStorage.setItem("fav", JSON.stringify(fav))
+                                }
+                            })
+                        }
+                    })
                     window.location.assign('./main/index.html')
                 }
             }
