@@ -7,59 +7,68 @@
     margin: 10rem;
 }
 
-.location{
+.container{
     width: 100%;
     display: flex;
-    flex-direction:column;
+    justify-content: center;
+}
+
+.location{
+    width: 60%;
+    border: 2rem solid white;
+    padding: 15rem;
+    display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
+    flex-direction: column;
 }
 
 .card{
-    width: 50%;
-    border: solid white 2rem;
+    width: 70%;
+    border: 2rem solid white;
+    padding: 15rem;
+    margin: 15rem;
+}
+
+.name{
+    font-size: 20rem;
+    color: white;
+    margin-bottom: 5rem;
+}
+
+.comment{
+    font-size: 15rem;
+    background-color: transparent;
+    color: white;
+    border: 1rem solid white;
+    border-radius: 10%;
+    margin: 1rem;
+}
+.comment:hover{
+    font-size: 15.2rem;
+    background-color: white;
+    color: black;
+}
+
+.commentdisplay{
+    font-size: 18rem;
+    color: white;
     margin: 5rem;
 }
 
-.card-name{
-    margin: 10rem;
-    display: flex;
-    align-items: center;
-}
-
-.card-name p{
-    font-size: 20rem;
+.cs{
+    font-size: 18rem;
     margin: 0;
-    color: white;
 }
 
-.info{
-    width: 50%;
-    float: left;
-}
-
-.infofav{
-    width: 50%;
-}
-
-.see{
+.mycomment{
     font-size: 15rem;
-    background-color: transparent;
-    color: white;
-    border: 1rem solid white;
-    border-radius: 10%;
-    float: right;
-    margin: 1rem;
+    background-color: whitesmoke;
+    border: 1rem solid black;
+    margin: 8rem 0;
 }
 
-.see:hover{
-    font-size: 15.2rem;
-    background-color: white;
-    color: black;
-}
-
-.save{
+.addcomment{
     font-size: 15rem;
     background-color: transparent;
     color: white;
@@ -68,8 +77,16 @@
     margin: 1rem;
 }
 
-.save:hover{
+.addcomment:hover{
     font-size: 15.2rem;
     background-color: white;
     color: black;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
 }

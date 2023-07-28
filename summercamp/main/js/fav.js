@@ -59,8 +59,10 @@ location3.map(location => {
     const card = locationcard.content.cloneNode(true).children[0]
     const name = card.querySelector("[data-name]")
     const web = card.querySelector("[data-web]")
+    const see = card.querySelector("[fav]")
     name.textContent = location.name
     web.textContent = location.website
+    see.textContent = location.name
     container.append(card)
     return { name: location.name, web: location.website, element: card }
 })
@@ -78,7 +80,6 @@ docsSnap.forEach(doc => {
 })
 
 const docRef = doc(db, "favourites", localStorage.getItem("docid"));
-
 save.addEventListener("click", async(e) => {
     await e.preventDefault()
     await filterData('name', localStorage.getItem("name"))
@@ -99,3 +100,10 @@ save.addEventListener("click", async(e) => {
     }
 })
 //favfire
+
+document.querySelectorAll('.see').forEach(item => {
+    item.addEventListener('click', async(e) => {
+        await localStorage.setItem("comment", item.textContent)
+        window.location.assign('staff.html')
+    })
+})
