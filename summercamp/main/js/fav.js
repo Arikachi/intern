@@ -104,6 +104,11 @@ save.addEventListener("click", async(e) => {
 document.querySelectorAll('.see').forEach(item => {
     item.addEventListener('click', async(e) => {
         await localStorage.setItem("comment", item.textContent)
-        window.location.assign('staff.html')
+        await locationX.forEach(loc => {
+            if(loc.name == item.textContent){
+                localStorage.setItem("map", loc.map)
+            }
+        })
+        window.location.assign('comment.html')
     })
 })

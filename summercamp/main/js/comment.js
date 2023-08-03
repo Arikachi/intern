@@ -37,10 +37,12 @@ btn_com.addEventListener("click", async() => {
     var colRef = collection(db, loc);
     var docsSnap = await getDocs(colRef);
     await docsSnap.forEach(doc => {
-        var id = doc.data().name
         var cs1 = document.createElement("div")
+        var map = document.createElement("iframe")
+        map.src = localStorage.getItem('map')
         cs1.classList.add('cs')
         cs1.textContent = doc.data().name + ": " + doc.data().comment
+        com.append(map)
         com.append(cs1)
         container.append(commentsection)
 
@@ -58,7 +60,7 @@ btn_com.addEventListener("click", async() => {
         }
         await addData(commu);
         await alert('thank you for your comment')
-        window.location.assign('staff.html')
+        window.location.assign('comment.html')
       }
     })
 })

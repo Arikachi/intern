@@ -3,9 +3,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Programs - Summer Camp Website Template</title>
+	<title>Blog - Summer Camp Website Template</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="stylesheet" href="css/style-program.css" type="text/css">
+	<link rel="stylesheet" href="css/style-fav.css" type="text/css">
 </head>
 <body>
 	<div class="header">
@@ -13,22 +13,22 @@
 			<a href="index.html" id="logo"><img src="images/logo.png" alt="logo"></a>
 			<ul>
 				<li>
-					<a href="index.html"><span>H</span>ome</a>
+					<a href="index.html">Home</a>
 				</li>
 				<li>
-					<a href="about.html"><span>A</span>bout</a>
-				</li>
-				<li class="selected">
-					<a href="programs.html"><span>P</span>rograms</a>
+					<a href="about.html">About</a>
 				</li>
 				<li>
-					<a href="blog.html"><span>B</span>log</a>
+					<a href="search.html">Search</a>
 				</li>
 				<li>
-					<a href="staff.html"><span>S</span>taff</a>
+					<a href="favourite.html">Favour</a>
 				</li>
 				<li>
-					<a href="contact.html"><span>C</span>ontact</a>
+					<a href="comment.html">Comment</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
 				</li>
 			</ul>
 			<div>
@@ -38,13 +38,12 @@
 			</div>
 		</div>
 	</div>
-	<div class="body2">
-		<div class="mapdiv"><img class="map" src="./css/map.png"></div>
-		<form class="searchbar">
-			<input type="text" class="search" placeholder="SEARCH FOR YOUR FAVOURITE ATTRACTIONS" data-search>
-		</form>
+	<div class="body3">
+		<div class="title">ATTRACTIONS YOU CARE ABOUT</div>
 
 		<div class="location" data-container></div>
+
+		<button class="save">SAVE YOUR FAVOURATES</button>
 
 		<template data-location-template>
 			<div class="card">
@@ -54,8 +53,7 @@
 						<p data-web>- hanoi.org</p>
 					</div>
 					<div class="infofav">
-						<button class="fav" fav>Add to favourite!</button>
-						<button class="nofav" nofav>Remove from favourite</button>
+						<button class="see" fav>See more!</button>
 					</div>
 				</div>
 			</div>
@@ -108,7 +106,7 @@
 		</div>
 	</div>
 
-	<script  type="module" src="js/program.js"></script>
+	<script  type="module" src="js/fav.js"></script>
 	<script  type="module" src="js/module.js"></script>
 </body>
 </html>

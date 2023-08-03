@@ -1,0 +1,43 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0;
+}
+
+.h1 {
+  text-align: center;
+  font-size: 35rem;
+  color: white;
+}
+
+.input-group{
+  /* background-color: white; */
+  margin: 20rem;
+}
+
+#image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200rem, 1fr));
+  gap: 20rem;
+}
+
+#image-grid img{
+  border: 2rem solid whitesmoke;
+}
+
+.item {
+  aspect-ratio: 1/1;
+}
+
+.form-control{
+  font-size: 15rem;
+  background-color: white;
+}
+
+.container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}

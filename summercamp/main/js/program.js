@@ -27,18 +27,9 @@ locations = locationX.map(location => {
     return { name: location.name, web: location.website, element: card }
 })
 
-let fav = JSON.parse(localStorage.getItem("fav"))
-let location2 = []
-// let fav = []
-console.log(fav);
-
-fav.forEach(item => {
-  if(location2.includes(item.name) == false){
-      location2.push(item.name)
-  }
-})
-
-console.log(location2);
+if(localStorage.getItem("fav") == []){
+  let fav = []
+  let location2 = []
 
 document.querySelectorAll('.fav').forEach(item => {
     item.addEventListener('click', () => {
@@ -93,3 +84,122 @@ document.querySelectorAll('.fav').forEach(item => {
       })
     })
   })
+}else{
+  let fav = JSON.parse(localStorage.getItem("fav"))
+  let location2 = []
+  fav.forEach(item => {
+    if(location2.includes(item.name) == false){
+        location2.push(item.name)
+    }
+  })
+
+document.querySelectorAll('.fav').forEach(item => {
+    item.addEventListener('click', () => {
+      locationX.forEach(place => {
+        if(item.classList.contains(place.id)){
+            if(location2.includes(place.name) == true){
+                alert("Item already in favourite list")
+            }else{
+                fav.push(place)
+                alert("added " + place.name + " to favourite list")
+            }
+        }
+      })
+      localStorage.setItem("fav", JSON.stringify(fav))
+      fav.forEach(item => {
+        if(location2.includes(item.name) == false){
+            location2.push(item.name)
+        }
+      })
+    })
+  })
+
+  document.querySelectorAll('.nofav').forEach(item => {
+    item.addEventListener('click', () => {
+      locationX.forEach(place => {
+        if(item.classList.contains(place.id)){
+            if(location2.includes(place.name) == true){
+              console.log(fav);
+                for(var i = 0; i < fav.length; i++){
+                    if (location2[i] === place.name){
+                        fav.splice(i, 1)
+                        alert("removed " + place.name + " from favourite list")
+                    }
+                }
+                for(var i = 0; i < location2.length; i++){
+                  if (location2[i] === place.name){
+                      location2.splice(i, 1)
+                  }
+                }
+              console.log(fav);
+            }
+            else{
+              alert("Item not in favourite list")
+            }
+        }
+      })
+      localStorage.setItem("fav", JSON.stringify(fav))
+      fav.forEach(item => {
+        if(location2.includes(item.name) == false){
+            location2.push(item.name)
+        }
+      })
+    })
+  })
+}
+// let fav = JSON.parse(localStorage.getItem("fav"))
+// let location2 = []
+
+// document.querySelectorAll('.fav').forEach(item => {
+//     item.addEventListener('click', () => {
+//       locationX.forEach(place => {
+//         if(item.classList.contains(place.id)){
+//             if(location2.includes(place.name) == true){
+//                 alert("Item already in favourite list")
+//             }else{
+//                 fav.push(place)
+//                 alert("added " + place.name + " to favourite list")
+//             }
+//         }
+//       })
+//       localStorage.setItem("fav", JSON.stringify(fav))
+//       fav.forEach(item => {
+//         if(location2.includes(item.name) == false){
+//             location2.push(item.name)
+//         }
+//       })
+//     })
+//   })
+
+//   document.querySelectorAll('.nofav').forEach(item => {
+//     item.addEventListener('click', () => {
+//       locationX.forEach(place => {
+//         if(item.classList.contains(place.id)){
+//             if(location2.includes(place.name) == true){
+//               console.log(fav);
+//                 for(var i = 0; i < fav.length; i++){
+//                     if (location2[i] === place.name){
+//                         fav.splice(i, 1)
+//                         alert("removed " + place.name + " from favourite list")
+//                     }
+//                 }
+//                 for(var i = 0; i < location2.length; i++){
+//                   if (location2[i] === place.name){
+//                       location2.splice(i, 1)
+//                   }
+//                 }
+//               console.log(fav);
+//             }
+//             else{
+//               alert("Item not in favourite list")
+//             }
+//         }
+//       })
+//       localStorage.setItem("fav", JSON.stringify(fav))
+//       fav.forEach(item => {
+//         if(location2.includes(item.name) == false){
+//             location2.push(item.name)
+//         }
+//       })
+//     })
+//   })

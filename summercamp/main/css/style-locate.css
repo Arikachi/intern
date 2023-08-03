@@ -1,0 +1,92 @@
+.title{
+    font-size: 30rem;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin: 10rem;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.location{
+    width: 60%;
+    border: 2rem solid white;
+    padding: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card{
+    width: 70%;
+    border: 2rem solid white;
+    padding: 15rem;
+    margin: 15rem;
+}
+
+.name{
+    font-size: 20rem;
+    color: white;
+    margin-bottom: 5rem;
+}
+
+.comment{
+    font-size: 15rem;
+    background-color: transparent;
+    color: white;
+    border: 1rem solid white;
+    border-radius: 10%;
+    margin: 1rem;
+}
+.comment:hover{
+    font-size: 15.2rem;
+    background-color: white;
+    color: black;
+}
+
+.commentdisplay{
+    font-size: 18rem;
+    color: white;
+    margin: 5rem;
+}
+
+.cs{
+    font-size: 18rem;
+    margin: 0;
+}
+
+.mycomment{
+    font-size: 15rem;
+    background-color: whitesmoke;
+    border: 1rem solid black;
+    margin: 8rem 0;
+}
+
+.addcomment{
+    font-size: 15rem;
+    background-color: transparent;
+    color: white;
+    border: 1rem solid white;
+    border-radius: 10%;
+    margin: 1rem;
+}
+
+.addcomment:hover{
+    font-size: 15.2rem;
+    background-color: white;
+    color: black;
+}
+
+.hide{
+    display: none;
+}
+
+.show{
+    display: block;
+}
