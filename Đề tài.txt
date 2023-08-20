@@ -1,6 +1,0 @@
-1. Du lịch kiểu mới, thay đổi việc đi du lịch thông thường
-2. TRuyền tải thể dục thể thao đa dạng bộ môn đến với mọi người; world cup football woman có đội tuyển VN tham gia
-
-
-https://docs.google.com/spreadsheets/d/1QPj0bMnydGa4t4EPHDKl5Dq8FWNxVcqFKLLyxxPIzRw/edit#gid=0
-hoàn thiện trang chủ + chức năng đăng nhập/ đăng ký sử dụng firebase

@@ -32,17 +32,19 @@ let addData = async (signin) => {
     }
 }
 
+var map = document.createElement("iframe")
+com.append(map)
 btn_com.addEventListener("click", async() => {
     let loc = name.innerHTML
     var colRef = collection(db, loc);
     var docsSnap = await getDocs(colRef);
     await docsSnap.forEach(doc => {
         var cs1 = document.createElement("div")
-        var map = document.createElement("iframe")
+        // var map = document.createElement("iframe")
         map.src = localStorage.getItem('map')
         cs1.classList.add('cs')
         cs1.textContent = doc.data().name + ": " + doc.data().comment
-        com.append(map)
+        // com.append(map)
         com.append(cs1)
         container.append(commentsection)
 

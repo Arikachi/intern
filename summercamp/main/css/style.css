@@ -309,6 +309,7 @@ p a:hover {
 	border:2rem solid #a1ad7f;
 	float:left;
 	max-width: 100%;
+	border-radius: 5%;
 }
 .body div div.featured div {
 	background:url(../images/frame1.gif) no-repeat center 12rem #757e63;
