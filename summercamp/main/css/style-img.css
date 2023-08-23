@@ -1,3 +1,24 @@
+body{
+  background-image: url('https://img.rawpixel.com/private/static/images/website/2022-05/pf-lukestackpoole7-black-beach-job598.jpg?w=1200&h=1200&dpr=1&fit=clip&crop=default&fm=jpg&q=75&vib=3&con=3&usm=15&cs=srgb&bg=F4F4F3&ixlib=js-2.2.1&s=1c9c019662cf02441d7767effd053b14');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -2;
+}
+
+.bg{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  opacity: .5;
+  z-index: -1;
+  background-size: cover;
+}
+
 .container {
   width: 100%;
   display: flex;

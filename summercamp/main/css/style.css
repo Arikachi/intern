@@ -187,6 +187,17 @@ p a:hover {
 	border: dotted 2rem white;
 }
 
+.welcome2{
+	font-size: 20rem;
+	color: white;
+	position: fixed;
+	top: 5%;
+	display: flex;
+	justify-content: center;
+	padding: 2rem;
+	border: dotted 2rem white;
+}
+
 .header div a {
 	outline:none;
 }
