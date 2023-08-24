@@ -3,9 +3,9 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Blog - Summer Camp Website Template</title>
+	<title>Programs - Summer Camp Website Template</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="stylesheet" href="css/style-fav.css" type="text/css">
+	<link rel="stylesheet" href="css/style-program.css" type="text/css">
 </head>
 <body>
 	<div class="bg"></div>
@@ -13,13 +13,13 @@
 		<div>
 			<a href="index.html" id="logo"><img src="images/logo.png" alt="logo"></a>
 			<ul>
-				<li class="selected">
+				<li>
 					<a href="index.html">Home</a>
 				</li>
 				<li>
 					<a href="about.html">About</a>
 				</li>
-				<li>
+				<li class="selected">
 					<a href="search.html">Search</a>
 				</li>
 				<li>
@@ -39,22 +39,24 @@
 			</div>
 		</div>
 	</div>
-	<div class="body3">
-		<div class="title">ATTRACTIONS YOU CARE ABOUT</div>
+	<div class="body2">
+		<div class="mapdiv"><img class="map" src="./css/map.png"></div>
+		<form class="searchbar">
+			<input type="text" class="search" placeholder="SEARCH FOR YOUR FAVOURITE ATTRACTIONS" data-search>
+		</form>
 
 		<div class="location" data-container></div>
-
-		<button class="save">SAVE YOUR FAVOURATES</button>
 
 		<template data-location-template>
 			<div class="card">
 				<div class="card-name">
 					<div class="info">
 						<p data-name>- Ha Noi</p>
-						<p data-web>- hanoi.org</p>
+						<p data-web><a data-2>- hanoi.org</a></p>
 					</div>
 					<div class="infofav">
-						<button class="see" fav>See more!</button>
+						<button class="fav" fav>Add to favourite!</button>
+						<button class="nofav" nofav>Remove from favourite</button>
 					</div>
 				</div>
 			</div>
@@ -107,7 +109,7 @@
 		</div>
 	</div>
 
-	<script  type="module" src="js/fav.js"></script>
+	<script  type="module" src="js/program.js"></script>
 	<script  type="module" src="js/module.js"></script>
 </body>
 </html>

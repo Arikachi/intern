@@ -1,10 +1,11 @@
 <!DOCTYPE html>
+<!-- Website template by freewebsitetemplates.com -->
 <html>
 <head>
 	<meta charset="UTF-8">
-	<title>Staff - Summer Camp Website Template</title>
+	<title>Contact - Summer Camp Website Template</title>
 	<link rel="stylesheet" href="css/style.css" type="text/css">
-	<link rel="stylesheet" href="css/style-com.css" type="text/css">
+	<link rel="stylesheet" href="css/style-img.css" type="text/css">
 </head>
 <body>
 	<div class="bg"></div>
@@ -27,7 +28,7 @@
 				<li>
 					<a href="comment.html">Comment</a>
 				</li>
-				<li>
+				<li class="selected">
 					<a href="contact.html">Share</a>
 				</li>
 			</ul>
@@ -38,28 +39,14 @@
 			</div>
 		</div>
 	</div>
-	<div class="body3">
-		<div class="title">COMMUNITY'S THOUGHTS</div>
+	<div class="body4">
 		<div class="container">
-			<div class="location">
-				<div class="card">
-					<div class="name"></div>
-					<button class="comment">Show comments</button>
-					<div class="commentdisplay">
-					</div>
-				</div>
-
-				<template comment-section>
-					<div class="hold">
-						<div class="commentsection" com>
-						
-						</div>
-						<input type="text" class="mycomment" placeholder="Write your own!">
-						<button class="addcomment">Submit</button>
-					</div>
-				</template>
+			<div class="h1">Images Community here!!</div>
+			<div class="input-group mb-3">
+			  <input type="file" class="form-control"/>
 			</div>
-		</div>
+			<div id="image-grid"></div>
+		  </div>
 	</div>
 	<div class="footer">
 		<div>
@@ -107,7 +94,6 @@
 			</p>
 		</div>
 	</div>
-
-	<script src="js/comment.js" type="module"></script>
+	<script src="js/app.js" type="module"></script>
 </body>
 </html>

@@ -17,6 +17,7 @@ locations = locationX.map(location => {
     const card = locationcard.content.cloneNode(true).children[0]
     const name = card.querySelector("[data-name]")
     const web = card.querySelector("[data-web]")
+    const web2 = card.querySelector("[data-2]")
     const btn = card.querySelector("[fav]")
     const btn2 = card.querySelector("[nofav]")
     name.textContent = location.name
